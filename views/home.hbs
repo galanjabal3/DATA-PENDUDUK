@@ -35,6 +35,7 @@
                 <th>Ttl</th>
                 <th>Golongan Darah</th>
                 <th>No Telepon</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -46,6 +47,7 @@
                 <td>{{ Ttl }}</td>
                 <td>{{ Golongan_Darah }}</td>
                 <td>{{ Telepon }}</td>
+                <td><a href="/hapus/{{ NIK }}"><button class="btn-primary">DELETE</button></a></td>
             </tr>
             {{/each}}
         </tbody>

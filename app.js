@@ -48,6 +48,16 @@ app.post('/tambahbarang', (req, res) =>{
     )
 })
 
+app.get('/hapus/:NIK',(req, res) =>{
+    var nik = req.params.NIK;
+    koneksi.query("DELETE from data_penduduk where NIK=?",
+     [nik], (err, hasil) =>{
+         if(err) throw err;
+         res.redirect('/')
+     }
+    )
+})
+
 app.listen(port, () =>{
     console.log(`App berjalan pada port ${port}`);
 });
